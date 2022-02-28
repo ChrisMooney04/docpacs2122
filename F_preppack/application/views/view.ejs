@@ -14,6 +14,9 @@
   <body>
     <%console.log(orderlist);%>
     <% if (orderlist) { %>
+      <% if (order) { %>
+        <p1><%-JSON.stringify(orderlist[order])%></p1>
+        <% } else { %>
       <ul>
         <% for (var i in orderlist) { %>
           <div class="Stuffs">
@@ -21,8 +24,9 @@
             <br>
             <p1> Customer Name: <%-JSON.stringify(orderlist[i]["customerName"])%> </p1>
           </div>
-        <%  } %>
-      </ul>
+          <%  } %>
+        </ul>
+        <% } %>
     <% } else { %>
       <p1>No orders</p1>
     <% } %>

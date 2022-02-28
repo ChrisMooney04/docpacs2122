@@ -113,8 +113,10 @@ app.post('/additem', (req, res) => {
 }
 })
 app.get('/view', (req, res) => {
+    order = req.query.order
     res.render('view', {
-      orderlist: data.order
+      orderlist: data.order,
+      order: order
     })
 })
 
